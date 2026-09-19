@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloader</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0b0d12;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 500px;
+            max-width: 90%;
+            background: #151922;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            background: #0b0d12;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .formats {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .formats label {
+            flex: 1;
+            padding: 14px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Social Media Downloader</h1>
+
+    <p>Paste a public video URL</p>
+
+    <form action="/download" method="POST">
+
+        <input
+            type="url"
+            name="url"
+            placeholder="Paste video URL here"
+            required
+        >
+
+        <div class="formats">
+
+            <label>
+                <input type="radio" name="format" value="mp3" checked>
+                MP3
+            </label>
+
+            <label>
+                <input type="radio" name="format" value="mp4">
+                MP4
+            </label>
+
+        </div>
+
+        <button type="submit">
+            Download
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
